@@ -19,12 +19,9 @@ ActiveRecord::Schema.define(version: 20180225094258) do
     t.string "name"
     t.string "type"
     t.string "size"
-    t.integer "price"
     t.string "description"
-    t.bigint "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["place_id"], name: "index_drinks_on_place_id"
   end
 
   create_table "places", force: :cascade do |t|
@@ -46,7 +43,6 @@ ActiveRecord::Schema.define(version: 20180225094258) do
     t.index ["place_id"], name: "index_prices_on_place_id"
   end
 
-  add_foreign_key "drinks", "places"
   add_foreign_key "prices", "drinks"
   add_foreign_key "prices", "places"
 end

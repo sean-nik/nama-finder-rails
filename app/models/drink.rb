@@ -1,5 +1,6 @@
 class Drink < ApplicationRecord
   has_many :prices
+  has_many :places, through: :prices
 
   validates :name, presence: true
   validates :type, presence: true, inclusion: { in: ["Beer", "Wine", "Mixed Drink", "Liquor"] }
