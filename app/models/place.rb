@@ -1,5 +1,6 @@
 class Place < ApplicationRecord
-  has_many :drinks
+  has_many :drinks, through: :prices
+  has_many :prices
 
   validates :name, presence: true
   validates :type, presence: true, inclusion: { in: ["Bar", "Restaurant", "Club"] }

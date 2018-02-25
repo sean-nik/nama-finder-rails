@@ -4,9 +4,7 @@ class CreateDrinks < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :type
       t.string :size
-      t.integer :price
       t.string :description
-      t.references :place, foreign_key: true
 
       t.timestamps
     end
