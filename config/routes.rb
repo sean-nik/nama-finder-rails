@@ -5,5 +5,11 @@ Rails.application.routes.draw do
     resources :prices
   end
 
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :places, only: [ :index ]
+    end
+  end
+
 
 end
