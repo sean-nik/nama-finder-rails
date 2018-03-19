@@ -5,4 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Place.create!(name: "Hub", category: "Bar", address: "Roppongi", photo: 'https://www.pub-hub.com/images/shop/main/5576.jpg')
+a = Place.create!(name: "Hub", category: "Bar", address: "Roppongi", photo: 'https://www.pub-hub.com/images/shop/main/5576.jpg')
+b = Drink.create!(name: "Cuba Libre", category: "Mixed Drink", size: "Pint", description: "")
+c = Price.new(cost: 500)
+c.place = a
+c.drink = b
+c.save
