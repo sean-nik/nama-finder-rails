@@ -5,4 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Place.create!(name: "Hub", category: "Bar", address: "Roppongi", phone_number: '12345')
+Place.create!(name: "Hub", category: "Bar", address: "Roppongi", photo: 'https://www.pub-hub.com/images/shop/main/5576.jpg')
