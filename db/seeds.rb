@@ -11,3 +11,11 @@ c = Price.new(cost: 500)
 c.place = a
 c.drink = b
 c.save
+
+d = Place.create!(name: "Footnik", category: "Bar", address: "Ebisu", photo: 'https://media-cdn.tripadvisor.com/media/photo-s/04/4b/5c/5f/footnik-ebisu.jpg')
+e = Drink.create!(name: "Guinness", category: "Beer", size: "Pint", description: "")
+f = Price.new(cost: 900)
+c.place = d
+c.drink = e
+c.save
+
