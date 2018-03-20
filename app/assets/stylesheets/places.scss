@@ -1,3 +1,36 @@
 // Place all the styles related to the Places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.app {
+  display: flex;
+}
+.main {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.map {
+  flex-grow: 1;
+  height: 100vh;
+  top: 0;
+  position: sticky;
+}
+.places {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.place {
+ flex-basis: calc(50% - 20px);
+ margin: 10px;
+}
+
+.place-picture {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.place-title {
+  margin-top: 10px;
+}
